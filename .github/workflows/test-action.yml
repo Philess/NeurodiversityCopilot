@@ -5,10 +5,13 @@ on:
 
 jobs:
   test_action:
+    if: contains(github.event.pull_request.labels.*.name, 'neurodiversity-check')
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
       - name: Run my Python Action
-        uses: ./  # Use path if local, or username/repo@tag if published
+        uses: ./
         with:
           azure_ai_project_endpoint: ${{ secrets.AZURE_AI_PROJECT_ENDPOINT }}
           model_deployment_name: "gpt-4.1"
