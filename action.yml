@@ -1,4 +1,4 @@
-name: "My Python Action"
+name: "Create issues for PR reviews"
 description: "A custom GitHub Action written in Python"
 inputs:
   azure_ai_project_endpoint:
