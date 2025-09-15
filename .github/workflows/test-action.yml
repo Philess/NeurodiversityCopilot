@@ -9,10 +9,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-      - id: label-the-PR
-        uses: actions/labeler@v6
-      - name: Create issues for PR reviews on neurodiversity-check
-        if: contains(steps.label-the-PR.outputs.all-labels, 'neurodiversity-check')
+      - name: Create issues for PR reviews
         uses: ./
         with:
           azure_ai_project_endpoint: ${{ secrets.AZURE_AI_PROJECT_ENDPOINT }}
