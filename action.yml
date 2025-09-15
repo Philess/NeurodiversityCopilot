@@ -1,0 +1,14 @@
+name: "My Python Action"
+description: "A custom GitHub Action written in Python"
+inputs:
+  azure_ai_project_endpoint:
+    description: "Azure AI project endpoint (set using GitHub secret)"
+    required: true
+    default: ""
+  model_deployment_name:
+    description: "The model deployment name to use"
+    required: true
+    default: "gpt-4.1"
+runs:
+  using: "docker"
+  image: "Dockerfile"

@@ -1,0 +1,12 @@
+name: Neurodiversity UX Checker
+on: [push]
+
+jobs:
+  test_action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run my Python Action
+        uses: ./  # Use path if local, or username/repo@tag if published
+        with:
+          my-input: "Hello World"

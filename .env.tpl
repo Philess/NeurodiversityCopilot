@@ -1,0 +1,1 @@
+INPUT_AZURE_AI_PROJECT_ENDPOINT="https://neuro-resource.services.ai.azure.com/api/projects/neuro"
